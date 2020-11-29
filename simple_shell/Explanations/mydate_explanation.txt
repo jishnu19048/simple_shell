@@ -1,0 +1,15 @@
+COMMAND: mydate (implements date from linux)
+
+SOURCE CODE: date binaries in linux
+
+USAGE: mkdir [OPTION]... [DIRECTORY]...
+
+WHAT IT DOES: diplays the local time if no option is specified.
+
+OPTIONS: 
+	-u  (display UTC/GMT time)
+	-I  (display ISO time)
+	
+CORNER CASES AND ERRORS HANDELED:
+	Invalid commands, options, etc.
+	exits the command with error description.

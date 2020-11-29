@@ -1,0 +1,15 @@
+COMMAND: ls1 (implements ls from linux)
+
+SOURCE CODE: ls binaries in linux
+
+USAGE: ls1 [OPTION]... [DIRECTORY]...
+
+WHAT IT DOES: diplays all the directories and the files in the given directory
+
+OPTIONS: 
+	-a  (show all the folders and files(including hidden folders representated by '.' and '..'))
+	-E  (sorts the contents according to their extension)
+	
+CORNER CASES AND ERRORS HANDELED:
+	Invalid commands,DIRECTORY not existing, etc.
+	exits the command with error description.

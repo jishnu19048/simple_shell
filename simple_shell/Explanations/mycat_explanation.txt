@@ -1,0 +1,15 @@
+COMMAND: mycat (implements cat from linux)
+
+SOURCE CODE: cat binaries in linux
+
+USAGE: cat [OPTION]... [FILE]...
+
+WHAT IT DOES: concatenates the file contents to stdout
+
+OPTIONS: 
+	-n  (display all the output with numbered lines)
+	-E  (adds '$'to end of every line)
+	
+CORNER CASES AND ERRORS HANDELED:
+	Invalid commands, file not exsisting, etc.
+	

@@ -1,0 +1,28 @@
+OBJECTIVE: We have csv file, in which the data is comma separated. The objective was to calcluate the average marks of each student from the csv file. The idea was to use the child process to calculate average for students of Section A and then the parent process to calculate the average marks for students of Section B.
+
+Preprocessing: Since the given file wasnt formatted properly(data wasnt comma separated) so I converted the file to txt and then removed the header. 
+
+Reading: I used space and new line as delimiters while parsing a line. Read system call was used to store the enitre data in a char* array. Then I further iterated through this array and extracted lines. These lines were individually parsed and I had all the details of each student.
+
+System calls:
+	fork: 
+		We spawn a child process in the beginning using the fork system call.
+		We have to check if the forking was correct or not using the process id returned by the fork function.
+	open: 
+		When the returned process id is 0, we have entered the child process and its task is calculating the    			average for students of Section A. We use the open system call to open our target file. It returns an
+		integer , 1 is file was successfully opened and 0 if not.
+	read:
+		When the target file is succesfully opened, we use the read system call to read the entire data in our
+		target file to a buffer that is a char* array. It returns the the total number of bytes read. Following 
+		this parse the data line after line using the parse function which makes use of strtok function from 
+		c library. Once we have the data for a student, calculating the average is very trivial.
+		
+	close: 
+		We close the target file using the close system call after we have read the data into the buffer.	
+		
+	wait:
+		When the returned process id is greater than 0, we have entered the parent process. Now we have to wait
+		till the child process is complete. For this we use the wait system call. After this, we have to 	 			calculate the average of the section B students. The process is the same as the how its done for the 		child process.
+		
+	
+	

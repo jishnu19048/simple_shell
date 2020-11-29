@@ -1,0 +1,41 @@
+TEST CASE 1:
+	>echo Hi Guys
+	>echo -n Hi Guys
+	>echo -e Hello \nGuys \cok
+	>pwd
+	>cd ..
+	>ls1
+	>history -c
+	>history 
+	>history -s ok
+	>history
+	>cd Q1   
+	>ls1
+	>mycat q1_explanation.txt
+	>mycat -E q1_explanation.txt
+	>mydate
+	>mydate -u
+	>mydate -u b //invalid command
+	>mydate -i //invalid command
+	>mydate -I
+	>mydate
+	>exit
+
+TEST CASE 2:
+	**create file trash.txt in /Assignment2/Q2/***
+	>ls1
+	>pwd
+	>mkdir //invalid command
+	>mkdir bruh
+	>mkdir bruh //error
+	>ls //invalid command
+	>ls1
+	>ls1 -s
+	>ls1 -a
+	>myrm -i trash.txt	
+	>ls1
+	>myrm -v trash.txt
+	>exit
+	
+	Test cases can be randomised as such with wrong commands and wrong options for variable outputs.
+
